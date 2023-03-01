@@ -9,13 +9,13 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    Axios.get("https://spots.onrender.com/getUsers").then((response) => {
+    Axios.get("http://localhost:30001/getUsers").then((response) => {
       setListOfUsers(response.data);
     });
   }, []);
 
   const createUser = () => {
-    Axios.post("https://spots.onrender.com/createUser", {
+    Axios.post("http://localhost:30001/createUser", {
       name,
       age,
       username,
