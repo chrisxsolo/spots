@@ -12,6 +12,13 @@ mongoose.connect(
   "mongodb+srv://chris:123@cluster0.a0mers6.mongodb.net/?retryWrites=true&w=majority"
 );
 
+
+-app.use (express.urlencoded ({ extended: false }));
+app.use(
+cors ({
+origin: ["http://localhost:3000", "https://spots.onrender.com"], })
+);
+
 app.get("/getUsers", (req, res) => {
   UserModel.find({}, (err, result) => {
     if (err) {
