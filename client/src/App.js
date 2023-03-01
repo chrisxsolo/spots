@@ -68,7 +68,7 @@ function App() {
             setUsername(event.target.value);
           }}
         />
-        <button onClick={createUser}> Create User </button>
+        <button onClick={createUser}> NATHAN IS GAY </button>
         <h1>Nathan is gay</h1>
       </div>
     </div>
